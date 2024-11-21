@@ -1,0 +1,13 @@
+<div class="nav">
+
+        <ul>
+            <li><a th:href="@{/acceso/index(id=${usuario != null ? usuario.idUsuario : 0})}">Inicio</a></li>
+            <li><a th:href="@{/juegos/listarJuegos}">Videojuegos</a></li>
+            <li><a th:href="@{/clientes/listarClientes}">Clientes</a></li>
+            <li><a th:href="@{/usuarios/listarUsuarios}">Usuarios</a></li>
+            <li><a th:href="@{/reservas/listarReservas}">Reservas</a></li>
+            <li><a th:href="@{/entregas/listarEntregas}">Entregas</a></li>
+        </ul>
+
+    </div>
+

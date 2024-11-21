@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Administración de Entregas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+<div th:replace="comun/menu.html"></div>
+<div class="container my-2">
+    <h1>Registro de Entregas</h1>
+    <a th:href="@{/entregas/nuevaEntrega}" class="btn btn-primary btn-sm mb-3" > Registrar nueva entrega</a>
+    <a th:href="@{/entregas/busquedaEntrega}" class="btn btn-primary btn-sm mb-3" > Buscar entrega</a>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Fecha de entrega</th>
+            <th>Hora de entrega</th>
+            <th>Estado</th>
+            <th>Id de Reserva</th>
+            <th>Cliente</th>
+            <th>Juegos</th>
+
+            <th> Acción </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="entrega : ${listarEntregas}">
+            <td th:text="${entrega.idEntrega}"></td>
+            <td th:text="${#dates.format(entrega.fechEntrega, 'dd/MM/yyyy')}"></td>
+            <td th:text="${entrega.horaEntrega}"></td>
+            <td th:switch="${entrega.estadoEntrega}">
+                <span th:case="'0'">Devuelto</span>
+                <span th:case="'1'">No devuelto</span>
+            </td>
+
+            <td th:text="${entrega.reserva?.idReserva ?: 'No asignada'}"></td>
+
+            <td th:text="${entrega.reserva.cliente?.nomCliente?:'no registrado'}+' '+
+				${entrega.reserva.cliente?.apPat?:''}"></td>
+            <td>
+                <div th:each="juegos:${entrega.reserva.juegos}" th:text="${juegos.nomJuego}"style="display: block" ></div>
+            </td>
+
+            <td>
+                <a th:href="@{/entregas/actualizarEntrega/{id}(id=${entrega.idEntrega})}" class="btn btn-primary">Actualizar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.nav {
+    background-color: #1c2c90;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+li{
+    list-style: none;
+    margin: 10px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    padding: 10px;
+}
+a:hover{
+    color: #06061b;
+    cursor: pointer;
+    text-decoration: underline #06061b;
+
+}
+li:hover{
+    background-color: #1a9498;
+}
+
+/* Estilos CSS personalizados */
+.titulo-bienvenida {
+    text-align: center; /* Centrar el texto */
+    font-size: 3em; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Color azul Bootstrap */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra de texto */
+    margin-top: 50px; /* Espacio superior */
+}
+
+.titulo-bienvenida2 {
+    text-align: center; /* Centrar el texto */
+    font-size: 8em; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Color azul Bootstrap */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra de texto */
+    margin-top: 50px; /* Espacio superior */
+}
+
+/* Estilo para el scroll en el modal */
+.modal-body {
+    max-height: 500px; /* Altura máxima para la tabla */
+    overflow-y: auto;  /* Permite el scroll si el contenido excede la altura */
+}
