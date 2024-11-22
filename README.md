@@ -11,7 +11,6 @@ This project allows you to manage tasks efficiently, facilitating the creation, 
 1. **Clone the repository:**
 
    First, clone the repository to your local machine:
-   git clone https://github.com/usuario/proyecto.git
 
 2. **create the database in Mysql or SQL according to your driver, adapt it according to your needs**
    
