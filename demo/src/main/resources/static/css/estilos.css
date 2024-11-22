@@ -1,10 +1,12 @@
 .nav {
-    background-color: #1c2c90;
+    background-color:darkslateblue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: -10px;
     text-decoration: none;
+
 }
 ul{
     display: flex;
@@ -14,8 +16,11 @@ ul{
 }
 li{
     list-style: none;
-    margin: 10px;
+    margin: 5px;
+    padding: 10px;
     text-decoration: none;
+    font-size: x-large;
+    font-weight: bold;
 }
 a{
     text-decoration: none;
@@ -28,11 +33,22 @@ a:hover{
     cursor: pointer;
     text-decoration: underline #06061b;
 
+
 }
 li:hover{
     background-color: #1a9498;
+    border-radius: 20px;
+
 }
 
+.logonav{
+    height: 75px;
+    width: 75px;
+    margin: 5px;
+    margin-top: -10px;
+    padding: 5px;
+    border-radius: 30%;
+}
 
 .titulo-bienvenida {
     text-align: center;

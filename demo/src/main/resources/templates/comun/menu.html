@@ -1,5 +1,8 @@
 <div class="nav">
 
+     <img src="/img/logo dragogames.png" class="logonav">
+
+    <div>
         <ul>
             <li><a th:href="@{/acceso/index(id=${usuario != null ? usuario.idUsuario : 0})}">Inicio</a></li>
             <li><a th:href="@{/juegos/listarJuegos}">Videojuegos</a></li>
@@ -8,6 +11,9 @@
             <li><a th:href="@{/reservas/listarReservas}">Reservas</a></li>
             <li><a th:href="@{/entregas/listarEntregas}">Entregas</a></li>
         </ul>
-
+    </div>
+    <div>
+        <li style="float: right;"><a th:href="@{/acceso/logout}"> <img src="http://imgfz.com/i/nyd9eNg.png" style="width: 25%">  Logout</a></li>
+    </div>
     </div>
 
