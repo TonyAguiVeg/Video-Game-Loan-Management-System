@@ -5,12 +5,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" th:href="@{/css/estilos.css}">
 </head>
+
 <body>
 <div th:replace="comun/menu.html"></div>
 <div class="container">
-    <h1 class="mt-5">Lista de Juegos</h1>
+    <h1 class="mt-5">Lista de VideoJuegos</h1>
 
-    <a th:href="@{/juegos/nuevoJuego}" class="btn btn-primary mb-3">Nuevo Juego</a>
+    <a th:href="@{/juegos/nuevoJuego}" class="btn btn-primary mb-3">Nuevo VideoJuego</a>
 
     <table class="table table-striped">
         <thead class="thead-dark">
@@ -31,16 +32,16 @@
             <td th:text="${juego.dispoJueg}"></td>
             <td th:text="${juego.precio}"></td>
             <td>
-                <a th:href="@{/juegos/actualizarJuego/{id}(id=${juego.idJuego})}" class="btn btn-warning btn-sm">Editar</a>
-                <a th:href="@{/juegos/eliminarJuego/{id}(id=${juego.idJuego})}" class="btn btn-danger btn-sm">Eliminar</a>
+                <div class="d-flex align-items-center">
+                    <a th:href="@{/juegos/actualizarJuego/{id}(id=${juego.idJuego})}" class="btn btn-warning me-2">Editar</a>
+                    <a th:href="@{/juegos/eliminarJuego/{id}(id=${juego.idJuego})}" class="btn btn-danger">Eliminar</a>
+                </div>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

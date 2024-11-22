@@ -33,27 +33,143 @@ li:hover{
     background-color: #1a9498;
 }
 
-/* Estilos CSS personalizados */
+
 .titulo-bienvenida {
-    text-align: center; /* Centrar el texto */
-    font-size: 3em; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #007bff; /* Color azul Bootstrap */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra de texto */
-    margin-top: 50px; /* Espacio superior */
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: cyan;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 50px;
 }
 
 .titulo-bienvenida2 {
-    text-align: center; /* Centrar el texto */
-    font-size: 8em; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #007bff; /* Color azul Bootstrap */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra de texto */
-    margin-top: 50px; /* Espacio superior */
+    text-align: center;
+    font-size: 4em;
+    font-weight: bold;
+    color:cyan;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-top: 50px;
 }
 
 /* Estilo para el scroll en el modal */
 .modal-body {
-    max-height: 500px; /* Altura máxima para la tabla */
-    overflow-y: auto;  /* Permite el scroll si el contenido excede la altura */
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+body {
+    background: url('../img/fondovideojuegos.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color:cyan;
+    text-align: center;
+    font-weight: bold;
+}
+ td{
+    color:midnightblue;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+ thead {
+     text-align: center;
+}
+
+
+
+
+label{
+    color:darkslateblue;
+    font-weight: bolder;
+}
+h2{
+    margin: 30px;
+    margin-left: 240px;
+    color: azure;
+    font-weight: bold;
+}
+form{
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.containerlogin{
+    background: url('../img/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0 auto;
+    padding: 0 ;
+}
+
+.divcard{
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.divcard h2{
+    margin-right: 150px;
+    color: midnightblue;
+}
+.forminicio{
+    background-color: rgba(255, 255, 255, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+.datos1,.datos2{
+
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+
+
+}
+.datos1 {
+    color: azure;
+    font-weight: bold;
+    font-size: 2em;
+
+}
+.cajaindex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgindex{
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+}
+
+.divusuariox{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    align-items: center;
 }

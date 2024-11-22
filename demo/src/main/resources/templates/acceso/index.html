@@ -10,11 +10,15 @@
 <body >
 
 <div th:replace="comun/menu.html"></div>
-
-<h1 class="titulo-bienvenida">Bienvenido al Sistema</h1>
-<h3 style="text-align: center">  Sr(a).
-  <span  th:text="${usuario.getNombreUsuario() } "></span>
-  <span th:text="${usuario.getCliente().getNomCliente()+ '' +usuario.getCliente().getApPat()}"></span></h3>
-<h1 class="titulo-bienvenida2">Sistema de gestion de Videojuegos</h1>
+<div class="cajaindex">
+<h1 class="titulo-bienvenida">Bienvenido</h1><br>
+  <div class="divusuariox">
+<img src="/img/img.png" alt="Icono de usuario" class="imgindex">
+<h3 style="text-align: center">
+  <span  class="datos1 " th:text="${usuario.getNombreUsuario() } "></span><br><br>
+  <span class="datos2 " th:text="${usuario.getCliente().getNomCliente()+ ' ' +usuario.getCliente().getApPat()}"></span></h3>
+  </div>
+<h3 class="titulo-bienvenida2">Sistema de gestion de Videojuegos</h3>
+</div>
 </body>
 </html>

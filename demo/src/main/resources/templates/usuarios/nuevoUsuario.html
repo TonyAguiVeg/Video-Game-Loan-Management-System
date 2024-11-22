@@ -24,8 +24,8 @@
           <option th:each="cliente:${cliente}" th:value="${cliente.idCliente}"
                   th:text="${cliente.nomCliente + ' '+ cliente.apPat+' '+ cliente.apMat}"></option>
         </select>
-        <button type="submit" class="btn btn-primary col-2">Guardar</button>
-        <button type="button" class="btn btn-danger col-2" onclick="window.location.href='/usuarios/listarUsuarios'">Cancelar</button>
+        <button type="submit" class="btn btn-info col-2">Guardar</button>
+        <button type="button" class="btn btn-secondary col-2" onclick="window.location.href='/usuarios/listarUsuarios'">Cancelar</button>
       </form>
     </div>
   </div>
