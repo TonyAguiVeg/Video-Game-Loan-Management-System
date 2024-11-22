@@ -90,7 +90,7 @@ public class ReservaController {
             throw new RuntimeException("reserva no encontrada");
         }
 
-        // Construir respuesta con datos relevantes
+
         Map<String, Object> detalles = new HashMap<>();
         detalles.put("clienteNombre", reserva.getCliente().getNomCliente() + " " +
                 reserva.getCliente().getApPat() + " " +

@@ -51,7 +51,7 @@
   <a th:href="@{/reservas/listarReservas}" class="btn btn-secondary">Regresar</a>
 </div>
 
-<!-- Modal -->
+
 <div class="modal fade" id="modalDetalles" tabindex="-1" aria-labelledby="modalDetallesLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -70,7 +70,7 @@
           </tr>
           </thead>
           <tbody id="modal-body-content">
-          <!-- Aquí se cargan los datos dinámicamente -->
+
           </tbody>
         </table>
       </div>
@@ -88,13 +88,13 @@
     buttons.forEach(button => {
       button.addEventListener("click", async () => {
         const idreserva = button.getAttribute("data-id");
-        console.log(`Obteniendo detalles para la reserva ID: ${idreserva}`); // Log del ID
+        console.log(`Obteniendo detalles para la reserva ID: ${idreserva}`);
 
         const modalBodyContent = document.getElementById('modal-body-content');
 
         try {
           const response = await fetch(`/reservas/detalles/${idreserva}`);
-          console.log(`Respuesta del servidor (status: ${response.status}):`, response); // Log del estado
+          console.log(`Respuesta del servidor (status: ${response.status}):`, response);
 
           if (!response.ok) throw new Error("Error al obtener los detalles de la reserva");
 

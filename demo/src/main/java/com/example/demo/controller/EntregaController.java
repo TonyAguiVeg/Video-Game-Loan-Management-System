@@ -78,7 +78,7 @@ public class EntregaController {
             throw new RuntimeException("Entrega no encontrada");
         }
 
-        // Construir respuesta con datos relevantes
+
         Map<String, Object> detalles = new HashMap<>();
         detalles.put("clienteNombre", entrega.getReserva().getCliente().getNomCliente() + " " +
                 entrega.getReserva().getCliente().getApPat() + " " +

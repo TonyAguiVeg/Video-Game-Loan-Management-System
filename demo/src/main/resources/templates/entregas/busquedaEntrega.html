@@ -55,7 +55,8 @@
     <a th:href="@{/entregas/listarEntregas}" class="btn btn-secondary mb-3"> Regresar a listado</a>
 </div>
 
-<!-- Modal para mostrar los detalles de la entrega -->
+
+
 <div class="modal fade" id="modalDetalles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg">
         <div class="modal-content">
@@ -94,7 +95,7 @@
 
         buttons.forEach(button => {
             button.addEventListener("click", async () => {
-                const entregaId = button.getAttribute("data-id"); // Obtén el ID de entrega
+                const entregaId = button.getAttribute("data-id");
                 const modalBodyContent = document.getElementById('modal-body-content');
                 const modalTitle = document.getElementById('entregaDescripcion');
 
@@ -106,7 +107,7 @@
                     const data = await response.json();
                     modalTitle.textContent = `Detalles de la Entrega ID: ${entregaId}`;
 
-                    // Rellena el modal con los datos obtenidos
+
                     modalBodyContent.innerHTML = `
                         <tr>
                             <td>${data.clienteNombre}</td>
